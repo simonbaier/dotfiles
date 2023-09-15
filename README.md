@@ -1,2 +1,2 @@
-# dotfiles
-my local config files
+# Simon's dotfiles
+
