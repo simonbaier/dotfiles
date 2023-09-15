@@ -1,0 +1,7 @@
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[user]
+	email = 615713+simonbaier@users.noreply.github.com

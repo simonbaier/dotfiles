@@ -4,17 +4,13 @@
 
 - clean: ['~']
 
-# - link:
-#     ~/.dotfiles: '' # special case, links to the root of the dotfiles repo
-#     ~/.tmux.conf: tmux.conf 
-#     ~/.vim: vim
-#     ~/.vimrc: vimrc
+- link:
+    ~/.zshrc:
+    ~/.gitconfig:
 
 - create:
     - ~/Work
-    - ~/hey/you/guys
-    # - ~/.vim/undo-history
-
+    
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
 
