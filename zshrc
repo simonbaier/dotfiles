@@ -13,6 +13,12 @@ alias jn="jupyter notebook"
 alias re="source ~/.zshrc"
 alias gs="git status"
 alias ga="git add ."
+alias gp="git push"
+alias c="clear"
+alias x="exit"
+
+
+
 
 
 # CUSTOMIZE PROMPT

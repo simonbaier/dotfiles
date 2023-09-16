@@ -1,3 +1,4 @@
+# this file configures the execution of the dotbot install script
 - defaults:
     link:
       relink: true
@@ -10,7 +11,15 @@
 
 - create:
     - ~/Work
-    
+
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+#  - [git submodule update --init --recursive, Installing submodules]  
+  - sleep 2 # optional - simply adds a pause to the output below
+  - echo "poop stain"
+  - 
+    command: ./test.zsh
+    stdout: true
+    stderr: true
+  
+
 
