@@ -2,6 +2,9 @@
 
 
 # SET VARIABLES
+# syntax highlighting for `man` pages - re-enable if colors contrast well with iterm theme settings 
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export BAT_CONFIG_PATH="/Users/simon/.config/bat/config"
 
 
 # CHANGE ZSH OPTIONS
@@ -16,7 +19,7 @@ alias ga="git add ."
 alias gp="git push"
 alias c="clear"
 alias x="exit"
-
+alias ccli="chrome-cli"
 
 
 
@@ -27,6 +30,8 @@ PROMPT='
 RPROMPT='%*'
 
 # ADD LOCATIONS TO $PATH VARIABLE
+## Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
 
 
 # WRITE FUNTIONS
@@ -36,6 +41,12 @@ function mkcd() {
 }
 
 # USE ZSH PLUGINS
+
+
+# OTHER CONFIGS
+
+
+
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -65,18 +76,14 @@ HIST_STAMPS="mm/dd/yyyy"
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # NOTE: zsh-syntax-highlighting must be the last plugin sourced.
-plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(urltools zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh   # all oh-m-zsh config settings must appear before it is sourced on this line
 
-
-
-
-
 # SET ALIASES
 alias ll="ls -laF"
-alias jn="jupyter notebook"
-alias reload="source ~/.zshrc"
+# alias jn="jupyter notebook"
+# alias reload="source ~/.zshrc"
 
 
 # >>> conda initialize >>>
