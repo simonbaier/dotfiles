@@ -8,34 +8,35 @@
 
 - link:
     ~/.zshrc:
-    ~/.zshenv:
     ~/.gitconfig:
-    ~/.hyper.js:
-    ~/.nanorc:
-    ~/.mackup.cfg:
-    ~/.config/bat:
-      create: true
-      path: config/bat
+    # ~/.zshenv:
+     # ~/.hyper.js:
+    # ~/.nanorc:
+    # ~/.mackup.cfg:
+    # ~/.config/bat:
+      # create: true
+      # path: config/bat
 
-- create:
-    - ~/Work
+# - create:
+    # - ~/Work
 
 - shell:
 #  - [git submodule update --init --recursive, Installing submodules]  
 #  - sleep 2 # optional - simply adds a pause to the output below
 #  - echo "poop stain"
-    - command: ./setup_homebrew.zsh
+    - 
+      command: ./setup_homebrew.zsh
       stdout: true
       stderr: true
-    - command: ./setup_zsh.zsh
-      stdout: true
-      stderr: true
-    - command: ./setup_node.zsh
-      stdout: true
-      stderr: true
-    - command: ./setup_macos.zsh
-      stdout: true
-      stderr: true
+    # - command: ./setup_zsh.zsh
+    #   stdout: true
+    #   stderr: true
+    # - command: ./setup_node.zsh
+    #   stdout: true
+    #   stderr: true
+    # - command: ./setup_macos.zsh
+    #   stdout: true
+    #   stderr: true
 
 
     
