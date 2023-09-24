@@ -21,6 +21,8 @@ alias gp="git push"
 alias c="clear"
 alias x="exit"
 alias ccli="chrome-cli"
+alias h="history"
+
 
 
 
@@ -43,10 +45,8 @@ function mkcd() {
 
 # USE ZSH PLUGINS
 
-
+ 
 # OTHER CONFIGS
-#Add Visual Studio Code (code)
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
 
 
 # Path to your oh-my-zsh installation.
