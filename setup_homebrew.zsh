@@ -9,11 +9,6 @@ echo "\n<<< Starting Homebrew setup... >>>\n"
 # make sure Brewfile and Brewfile.lock.json are in the same directory and add Brewfile.lock.json to .gitgnore
 brew bundle --verbose  
 
-# brew install httpie
-# brew install bat
 
-# brew install --cask --no-quarantine alfred
-# brew install --cask --no-quarantine dropbox
-# brew install --cask --no-quarantine google-chrome
-# brew install --cask --no-quarantine iterm2
-# brew install --cask --no-quarantine visual-studio-code
+
+

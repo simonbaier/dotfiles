@@ -1,22 +1,25 @@
-#taps 
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "microsoft/git"
-
-# brews
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Control Google Chrome from the command-line
 brew "chrome-cli"
+# GitHub command-line tool
 brew "gh"
+# Distributed revision control system
 brew "git"
+# Improved top (interactive process viewer)
 brew "htop"
+# User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
-
-#casks
+# Application launcher and productivity software
 cask "alfred"
 cask "git-credential-manager-core"
-
-# vscode - maybe go through these and remove some
+# Git client focusing on productivity
+cask "gitkraken"
 vscode "aaravb.chrome-extension-developer-tools"
 vscode "beauallison.brew-services"
 vscode "christian-kohler.npm-intellisense"

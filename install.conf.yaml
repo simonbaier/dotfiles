@@ -9,6 +9,9 @@
 - link:
     ~/.zshrc:
     ~/.gitconfig:
+    ~/.config/bat:
+      create: true
+      path: config/bat
     # ~/.zshenv:
      # ~/.hyper.js:
     # ~/.nanorc:
