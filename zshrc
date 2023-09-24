@@ -4,6 +4,7 @@
 # SET VARIABLES
 # syntax highlighting for `man` pages - re-enable if colors contrast well with iterm theme settings 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export HOMEBREW_CASK_OPTS="--no-quarantine"
 export BAT_CONFIG_PATH="/Users/simon/.config/bat/config"
 
 
@@ -22,6 +23,7 @@ alias c="clear"
 alias x="exit"
 alias ccli="chrome-cli"
 alias h="history"
+alias exa="exa -laFh --git"
 
 
 
