@@ -10,6 +10,14 @@
 echo "hello from .zshenv"
 
 function exists() {
-    command -v "$1" >/dev/null 2>&1
+  # `command -v` is similar to `which`, but it searches for aliases, builtins, and functions, too.
+    command -v $1  >/dev/null 2>&1
+
+    # More explicit version of above line:
+    # command -v $1  1>/dev/null 2>/dev/null # `1>` redirects the std output and std error to `/dev/null``
 }
 
+# Standard Input/Output/Error
+# STDIN (Keyboard)  = 0
+# STDOUT (Display)  = 1
+# STDERR (Display)  = 2
