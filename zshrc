@@ -1,5 +1,10 @@
 # Notes: https://github.com/simonbaier/notes/blob/master/zshrc.md  
+# zshrc does not load interactive shell config files (.zshrc, .zshenv, .zprofile, .zlogin) when invoked as a login shell.
+# zshenv is always sourced, even for non-interactive shells.
 
+
+
+echo "hello from .zshrc"
 
 # SET VARIABLES
 # syntax highlighting for `man` pages - re-enable if colors contrast well with iterm theme settings 
@@ -24,10 +29,6 @@ alias x="exit"
 alias ccli="chrome-cli"
 alias h="history"
 alias exa="exa -laFh --git"
-
-
-
-
 
 # CUSTOMIZE PROMPT
 PROMPT='

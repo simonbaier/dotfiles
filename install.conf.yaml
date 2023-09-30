@@ -8,6 +8,7 @@
 
 - link:
     ~/.zshrc:
+    ~/.zshenv:
     ~/.gitconfig:
     ~/.config/bat:
       create: true
@@ -26,7 +27,6 @@
 - shell:
 #  - [git submodule update --init --recursive, Installing submodules]  
 #  - sleep 2 # optional - simply adds a pause to the output below
-#  - echo "poop stain"
     - 
       command: ./setup_homebrew.zsh
       stdout: true
