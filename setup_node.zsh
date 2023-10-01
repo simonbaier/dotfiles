@@ -4,15 +4,35 @@ echo "\n<<< Starting Node setup... >>>\n"
 # Node versions are managed with `n`, which isn in the Brewfile.
 # See zshrc for N_PREFIX variable an additin to PATH.
 
+# add similar if/then block for n
+# add similar if/then block for npm
+# add similar if/then block for yarn
+
+
 if exists node; then
     echo "Node $(node --version) is already installed"  
 else
     echo "Node is not installed"
     echo "Installing Node & NPM using n ..."
-    brew install n
+    # brew install n
     n latest
     n lts
 fi
+
+# Install Global NPM Packages
+npm install --global firebase-tools
+npm install --global typescript
+npm install --global json-server
+npm install --global http-server
+# npm install --global @angular/cli
+# npm install --global @ionic/cli
+echo "Done installing global NPM packages"
+npm list --global --depth=0
+
+
+
+
+
 
 # if exists n; then
 #     echo "n $(n --version) is already installed"  
