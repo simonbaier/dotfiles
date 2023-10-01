@@ -33,6 +33,8 @@ alias h="history"
 alias exa="exa -laFh --git"
 alias bbd="brew bundle dump --force --describe"
 alias trail='<<<${(F)path}' # print all directories in $PATH variable  -(using parameter expansion)
+alias rm=trash # move files to trash instead of deleting them.
+
 
 # CUSTOMIZE PROMPT
 PROMPT='

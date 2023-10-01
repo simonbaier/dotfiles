@@ -20,10 +20,11 @@ else
 fi
 
 # Install Global NPM Packages
-npm install --global firebase-tools
-npm install --global typescript
-npm install --global json-server
-npm install --global http-server
+npm install --global firebase-tools # Firebase helps you build and run successful apps
+npm install --global typescript # TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
+npm install --global json-server # a full fake REST API with zero coding in less than 30 seconds (seriously)
+npm install --global http-server # a simple zero-configuration command-line http server
+npm install --global trash-cli # move files to trash instead of deleting them.
 # npm install --global @angular/cli
 # npm install --global @ionic/cli
 echo "Done installing global NPM packages"
