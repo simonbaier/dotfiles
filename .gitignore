@@ -2,3 +2,7 @@
 Brewfile.lock.json
 
 test.zsh
+
+redirected_output
+
+redirected_error

@@ -10,8 +10,10 @@ echo "hello from .zshrc"
 # syntax highlighting for `man` pages - re-enable if colors contrast well with iterm theme settings 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export HOMEBREW_CASK_OPTS="--no-quarantine"
-export BAT_CONFIG_PATH="/Users/simon/.config/bat/config"
-
+# export BAT_CONFIG_PATH="/Users/simon/.config/bat/config"
+export NULLCMD=bat
+export N_PREFIX="$HOME/.n"
+export PREFIX="$N_PREFIX"
 
 # CHANGE ZSH OPTIONS
 
@@ -30,6 +32,7 @@ alias ccli="chrome-cli"
 alias h="history"
 alias exa="exa -laFh --git"
 alias bbd="brew bundle dump --force --describe"
+alias trail='<<<${(F)path}' # print all directories in $PATH variable  -(using parameter expansion)
 
 # CUSTOMIZE PROMPT
 PROMPT='
@@ -39,6 +42,8 @@ RPROMPT='%*'
 # ADD LOCATIONS TO $PATH VARIABLE
 ## Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
+export PATH="$PATH:$N_PREFIX/bin"
+
 
 
 # WRITE FUNTIONS
@@ -46,6 +51,8 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
+
+
 
 # USE ZSH PLUGINS
 
