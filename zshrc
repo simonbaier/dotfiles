@@ -29,6 +29,7 @@ alias x="exit"
 alias ccli="chrome-cli"
 alias h="history"
 alias exa="exa -laFh --git"
+alias bbd="brew bundle dump --force --describe"
 
 # CUSTOMIZE PROMPT
 PROMPT='
