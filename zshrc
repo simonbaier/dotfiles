@@ -13,8 +13,6 @@ export NULLCMD=bat
 export N_PREFIX="$HOME/.n"
 export PREFIX="$N_PREFIX"
 
-# CHANGE ZSH OPTIONS
-
 
 # SET ALIASES
 alias ll="ls -laF"
@@ -30,8 +28,8 @@ alias ccli="chrome-cli"
 alias h="history"
 alias exa="exa -laFh --git"
 alias bbd="brew bundle dump --force --describe"
-alias trail='<<<${(F)path}' # print all directories in $PATH variable  -(using parameter expansion)
-alias rm=trash # move files to trash instead of deleting them.
+alias trail='<<<${(F)path}' # print all directories in $PATH variable  -(using "parameter expansion" - https://zsh.sourceforge.io/Doc/Release/Expansion.html#Parameter-Expansion)
+alias rm=trash # move files to system trash instead of permanent deletion
 
 
 # CUSTOMIZE PROMPT
@@ -39,10 +37,16 @@ PROMPT='
 %L %F{yellow}%~%f %B%F{white}%#%f%b '
 RPROMPT='%*'
 
-# ADD LOCATIONS TO $PATH VARIABLE
-export PATH="$N_PREFIX/bin:$PATH"
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
 
+# ADD LOCATIONS TO $path Array
+# the following syntax removes duplicates in $PATH variable
+# lowercase $path array automatically translates to an unppercase string version $PATH
+typeset -U path # remove duplicates in $PATH variable
+path=( # lowercase path returns an array of all directories in $PATH variable
+    "$N_PREFIX/bin" # add n to $path
+    $path           # add all directories in $PATH variable to $path
+    "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+)
 
 
 # WRITE FUNTIONS
@@ -52,52 +56,28 @@ function mkcd() {
 }
 
 
-
 # USE ZSH PLUGINS
 
  
 # OTHER CONFIGS
 
 
-# Path to your oh-my-zsh installation.
+# OH-MY-ZSH CONFIGS
 export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load. See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussel"
-# ZSH_THEME="jonathan"
-# ZSH_THEME="eastwood"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
+# ZSH_THEME="robbyrussel" # Set name of the theme to load. See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes# Set name of the theme to load. See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
 HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # >> PLUGINS >>
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # NOTE: zsh-syntax-highlighting must be the last plugin sourced.
 plugins=(urltools zsh-autosuggestions zsh-syntax-highlighting)
-
 source $ZSH/oh-my-zsh.sh   # all oh-m-zsh config settings must appear before it is sourced on this line
 
-# SET ALIASES
-alias ll="ls -laF"
-# alias jn="jupyter notebook"
-# alias reload="source ~/.zshrc"
 
-
-# >>> conda initialize >>>
+# CONDA CONFIGS
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/simon/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then

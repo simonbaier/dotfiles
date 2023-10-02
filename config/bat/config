@@ -12,30 +12,29 @@
 --map-syntax "zshenv:Bourne Again Shell (bash)"
 --map-syntax "Brewfile:Bourne Again Shell (bash)"
 
---theme "Visual Studio Dark+"
-
 #### THEMES ####
-# 1337
-# Coldark-Cold
-# Coldark-Dark
-# DarkNeon
-# Dracula
-# GitHub
-# Monokai Extended
-# Monokai Extended Bright
-# Monokai Extended Light
-# Monokai Extended Origin
-# Nord
-# OneHalfDark
-# OneHalfLight
-# Solarized (dark)
-# Solarized (light)
-# Sublime Snazzy
-# TwoDark
-# Visual Studio Dark+
-# ansi
-# base16
-# base16-256
-# gruvbox-dark
-# gruvbox-light
-# zenburn
+# --theme "1337"
+# --theme "Coldark-Cold"
+# --theme "Coldark-Dark" # 3
+# --theme "DarkNeon" # 4
+# --theme "Dracula"
+# --theme "GitHub"
+# --theme "Monokai Extended"
+# --theme "Monokai Extended Bright"
+# --theme "Monokai Extended Light"
+# --theme "Monokai Extended Origin"
+# --theme "Nord"
+--theme "OneHalfDark" # 1
+# --theme "OneHalfLight"
+# --theme "Solarized (dark)"
+# --theme "Solarized (light)"
+# --theme "Sublime Snazzy"
+# --theme "TwoDark" # 5
+# --theme "Visual Studio Dark+"  # good
+# --theme "ansi"
+# --theme "base16"
+# --theme "base16-256"
+# --theme "gruvbox-dark" # 2
+# --theme "gruvbox-light"
+# --theme "zenburn"
+# --theme ""zenburn-mod
