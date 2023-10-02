@@ -2,8 +2,6 @@
 # zshrc does not load interactive shell config files (.zshrc, .zshenv, .zprofile, .zlogin) when invoked as a login shell.
 # zshenv is always sourced, even for non-interactive shells.
 
-
-
 echo "hello from .zshrc"
 
 # SET VARIABLES
@@ -42,9 +40,8 @@ PROMPT='
 RPROMPT='%*'
 
 # ADD LOCATIONS TO $PATH VARIABLE
-## Add Visual Studio Code (code)
+export PATH="$N_PREFIX/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
-export PATH="$PATH:$N_PREFIX/bin"
 
 
 
